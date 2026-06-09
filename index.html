@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GregMat GRE Vocab Group 1 Exam</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section id="mainMenu" class="screen active-screen">
+      <div class="hero card">
+        <div class="eyebrow">Daily GRE Vocabulary Exam</div>
+        <h1>GregMat GRE Vocab Group 1 Exam</h1>
+        <p class="subtitle">Day 1 · Words 1–30 · 30 Words · 3 Exam Levels</p>
+        <p class="hero-text">Choose your exam level. Start with Basic for recall, continue to Medium for mixed practice, and finish with Hard for real GRE-style challenge.</p>
+        <div class="name-box">
+          <label for="studentName">Enter your name</label>
+          <input id="studentName" type="text" placeholder="Student" autocomplete="name" />
+        </div>
+      </div>
+      <section class="exam-grid" id="examCards"></section>
+    </section>
+
+    <section id="instructionScreen" class="screen">
+      <div class="card instruction-card">
+        <button class="ghost-btn" id="instructionBackBtn" type="button">← Back to Main Menu</button>
+        <div class="eyebrow">Selected Exam</div>
+        <h2 id="instructionTitle"></h2>
+        <div id="instructionMeta" class="meta-grid"></div>
+        <div class="instruction-note">
+          <strong>Instruction:</strong> Answer all questions carefully. You can move between parts. Your answers will be saved. The timer will continue globally and will not restart when you change parts. No hints or related vocabulary words are shown during the exam.
+        </div>
+        <button id="startExamBtn" class="primary-btn" type="button">Start Exam</button>
+      </div>
+    </section>
+
+    <section id="examScreen" class="screen">
+      <div class="status-bar" id="statusBar"></div>
+      <div class="question-area" id="questionArea"></div>
+      <div class="navigation-row" id="navigationRow"></div>
+    </section>
+
+    <section id="resultScreen" class="screen">
+      <div class="card result-summary" id="resultSummary"></div>
+      <div class="result-columns">
+        <div class="card word-strength-card">
+          <h3>Strong Words</h3>
+          <div id="strongWords" class="pill-box"></div>
+        </div>
+        <div class="card word-strength-card weak-card">
+          <h3>Weak Words</h3>
+          <div id="weakWords" class="pill-box"></div>
+        </div>
+      </div>
+      <div class="card review-section">
+        <h2>Question Review</h2>
+        <p class="muted">Click any question to see the full question, all original options, your answer, correct answer, and marks.</p>
+        <div id="reviewList"></div>
+      </div>
+      <div class="post-actions">
+        <button id="backToMenuBtn" class="secondary-btn" type="button">Back to Main Menu</button>
+        <button id="nextLevelBtn" class="primary-btn" type="button">Proceed to Next Level Exam</button>
+        <button id="exitBtn" class="ghost-btn" type="button">Exit</button>
+      </div>
+    </section>
+
+    <section id="exitScreen" class="screen">
+      <div class="card completion-card">
+        <h2>Exam session completed.</h2>
+        <p>You may now close this tab, or return to the main menu to try another level.</p>
+        <button id="exitBackBtn" class="primary-btn" type="button">Back to Main Menu</button>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
